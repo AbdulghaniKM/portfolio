@@ -253,7 +253,7 @@ const projects = ref([
     description: "An online system for the Samir Amis Co.",
     image: null,
     link: null,
-    tech: ["Nuxt.js", "Tailwind CSS"],
+    tech: ["Vue.js", "Tailwind CSS"],
   },
   {
     id: 8,
@@ -261,7 +261,7 @@ const projects = ref([
     description: "A website for the SuperNova",
     image: '/assets/img/supernova.jpg',
     link: 'https://ssupernovas.com/',
-    tech: ["Vue.js", "Tailwind CSS"],
+    tech: ["Vue.js", "Tailwind CSS", "DaisyUI"],
   }
 ]);
 
