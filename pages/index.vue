@@ -62,7 +62,7 @@
                   :style="`animation: fadeIn 0.5s ease-out ${index * 0.2}s both`"
                   :title="social.title">
                 <a :href="social.link" target="_blank">
-                  <component :is="social.icon" class="w-6 h-6 fill-mainTxt hover:fill-glow transition-colors" />
+                  <Icon :name="social.icon" class="w-6 h-6 text-mainTxt hover:text-glow transition-colors"/>
                 </a>
               </li>
             </ul>
@@ -170,16 +170,13 @@
           </p>
 
           <div>
-            <button
-              class="btn bg-mainTxt text-mainBg hover:bg- hover:text-glow outline-none animate-pulse-slow"
+            <a
+              href="/assets/Abdulghani Khalid Mohsen - Resume.pdf"
+              download
+              class="btn bg-mainTxt text-mainBg hover:bg-transparent hover:text-glow hover:border-glow transition-all duration-300"
             >
-              <a
-                href="/Abdulghani Khalid Mohsen - Resume.pdf"
-                download="Abdulghani Khalid Mohsen - Resume.pdf"
-              >
-                Download
-              </a>
-            </button>
+              Download
+            </a>
           </div>
         </div>
       </section>
@@ -195,8 +192,6 @@
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
-import LinkedInIcon from '../components/icons/LinkedInIcon.vue';
-import GitHubIcon from '../components/icons/GitHubIcon.vue';
 
 const isLoading = ref(true);
 const projects = ref([
@@ -274,12 +269,12 @@ const socials = [
   {
     title: 'LinkedIn',
     link: 'https://www.linkedin.com/in/abdulghani-khalid-mohsin-647278243/',
-    icon: LinkedInIcon
+    icon: 'mdi:linkedin'
   },
   {
     title: 'GitHub',
     link: 'https://github.com/AbdulghaniKM',
-    icon: GitHubIcon
+    icon: 'mdi:github'
   },
 ];
 
